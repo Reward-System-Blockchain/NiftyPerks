@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectTotalQTY, setOpenCart } from "../app/CartSlice.js";
 
 import {
-  HeartIcon,
-  MagnifyingGlassIcon,
+  BellIcon,
+  UserIcon,
   ShoppingBagIcon,
 } from "@heroicons/react/24/outline";
 import logo from "../assets/logo.png";
@@ -57,14 +57,14 @@ const Navbar = () => {
           </div>
           <ul className="flex items-center justify-center gap-2">
             <li className="grid items-center">
-              <MagnifyingGlassIcon
+              <UserIcon
                 className={`icon-style ${
                   navState && "text-slate-900 transition-all duration-300"
                 }`}
               />
             </li>
             <li className="grid items-center">
-              <HeartIcon
+              <BellIcon
                 className={`icon-style ${
                   navState && "text-slate-900 transition-all duration-300"
                 }`}
