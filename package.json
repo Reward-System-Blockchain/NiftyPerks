@@ -12,11 +12,15 @@
     "@heroicons/react": "^2.0.11",
     "@reduxjs/toolkit": "^1.8.5",
     "@splidejs/react-splide": "^0.7.10",
+    "@web3modal/ethereum": "^2.2.2",
+    "@web3modal/react": "^2.2.2",
+    "ethers": "^5.7.2",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.0",
-    "react-redux": "^8.0.4"
+    "react-redux": "^8.0.4",
+    "wagmi": "^0.12.6"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",
