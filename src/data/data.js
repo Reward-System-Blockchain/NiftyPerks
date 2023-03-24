@@ -56,7 +56,7 @@ const popularsales = {
     {
       id: "0p0x1",
       title: "Tshirt",
-      text: "MEN white tshirt",
+      text: "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. ", 
       rating: "4.9",
       btn: "Buy Now",
       img: psale2,
@@ -67,7 +67,7 @@ const popularsales = {
     {
       id: "0p0x2",
       title: "Nike Martine Rose",
-      text: "MEN Running Shoes",
+      text: "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. ",
       rating: "4.5",
       btn: "Buy Now",
       img: psale1,
@@ -78,7 +78,7 @@ const popularsales = {
     {
       id: "0p0x3",
       title: "Nike Smart Shoe 2.0",
-      text: "MEN Running Shoes",
+      text: "lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. ",
       rating: "5+",
       btn: "Buy Now",
       img: psale3,
@@ -374,4 +374,4 @@ const footerAPI = {
 };
 
 
-export { heroapi, footerAPI, story, sneaker, highlight, toprateslaes, popularsales };
+export { heroapi, footerAPI,popularsales, story, sneaker, highlight, toprateslaes };
