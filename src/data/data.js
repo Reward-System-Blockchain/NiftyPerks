@@ -51,7 +51,7 @@ const heroapi = {
 };
 
 const popularsales = {
-  title: "Popular Sales",
+  title: "Why-How-When",
   items: [
     {
       id: "0p0x1",
@@ -108,7 +108,7 @@ const sneaker = {
 };
 
 const toprateslaes = {
-  title: "Top Rated Sales",
+  title: "Our Products",
   items: [
     {
       id: "0M0x1",
