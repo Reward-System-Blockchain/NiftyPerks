@@ -5,8 +5,7 @@ import {
   Footer,
   Hero,
   Navbar,
-  Sales, 
-  
+  Sales,
   Stories,
 } from "./components";
 import Sales1 from "./components/Sales1";
@@ -19,7 +18,7 @@ import {
   story,
   footerAPI,
 } from "./data/data.js";
-import Sales1 from "./components/sales1";
+
 import {
   EthereumClient,
   w3mConnectors,
