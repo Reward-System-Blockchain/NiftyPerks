@@ -5,9 +5,11 @@ import {
   Footer,
   Hero,
   Navbar,
-  Sales,
+  Sales, 
+  
   Stories,
 } from "./components";
+import Sales1 from "./components/Sales1";
 import {
   heroapi,
   popularsales,
@@ -17,7 +19,7 @@ import {
   story,
   footerAPI,
 } from "./data/data.js";
-
+import Sales1 from "./components/sales1";
 import {
   EthereumClient,
   w3mConnectors,
@@ -47,7 +49,7 @@ const App = () => {
         <Cart />
         <main className="flex flex-col gap-16 relative">
           <Hero heroapi={heroapi} />
-          <Sales endpoint={popularsales} ifExists />
+          <Sales1 endpoint={popularsales} ifExists />
           <FlexContent endpoint={highlight} ifExists />
           <Sales endpoint={toprateslaes} />
           <FlexContent endpoint={sneaker} />
