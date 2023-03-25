@@ -1,5 +1,5 @@
 import React from "react";
-import Item1 from "./utils/Item1";
+import Item1 from "./utils/item1";
 import Title from "./utils/Title";
 
 const Sales1 = ({ ifExists, endpoint: { title, items } }) => {
