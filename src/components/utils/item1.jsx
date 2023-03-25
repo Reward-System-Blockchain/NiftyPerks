@@ -26,10 +26,12 @@ const Item1 = ({
   };
 
   const onCartToggle = () => {
-    dispatch(setOpenCart({
-        cartState: true
-    }))
-}
+    dispatch(
+      setOpenCart({
+        cartState: true,
+      })
+    );
+  };
 
   return (
     <>
@@ -99,4 +101,4 @@ const Item1 = ({
   );
 };
 
-export default Item1
+export default Item1;
