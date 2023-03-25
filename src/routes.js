@@ -1,4 +1,4 @@
-import Profile from "./components/profile";
+import Profile from "./components/Profile";
 import App from "./App";
 const routes = [
     { path: '/', component: App},
