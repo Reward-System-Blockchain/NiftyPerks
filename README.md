@@ -1,6 +1,6 @@
 # Nike Store Commerce Web Application! Check Live: [https://niftyperks.vercel.app//](https://niftyperks.vercel.app//)
 - Pre-requisites: Nothings! Just Stuck into This Course
-This project is developed and designed by JSSTACK DEVELOPERS (`#ahmed_js 😅🚀🚀🚀`).
+This project is developed and designed by NIFTY DEVELOPERS (`#ahmed_js 😅🚀🚀🚀`).
 This is a [Vite.js](https://vitejs.dev/) project bootstrapped with [`npm create vite@latest`]. Designed with TailwindCSS!
 # Important Links: 📣📢📣📢📣📢✈✈✈
 ### Go to ViteJS [https://vitejs.dev/] (https://vitejs.dev/)!
@@ -28,5 +28,4 @@ Open [http://localhost:5173/](http://localhost:5173/) with your browser to see t
 
 You can start editing the page by modifying `src/App.jsx`. The page auto-updates as you edit the file.
 
-## Deploy on Vercel
-Check out our [This Project On Vercel](https://travigo-travel-jsstack.vercel.app) for more details.
+
