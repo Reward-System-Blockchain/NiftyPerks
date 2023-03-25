@@ -5,9 +5,11 @@ import {
   Footer,
   Hero,
   Navbar,
-  Sales,
+  Sales, 
+  
   Stories,
 } from "./components";
+import Sales1 from "./components/Sales1";
 import {
   heroapi,
   popularsales,
