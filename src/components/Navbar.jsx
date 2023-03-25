@@ -29,7 +29,7 @@ const Navbar = () => {
     );
   };
   const onUserToggle = () => {
-    location.href = "/user";
+    location.href = "/profile";
    console.log(
       "User Profile Page"
    )
