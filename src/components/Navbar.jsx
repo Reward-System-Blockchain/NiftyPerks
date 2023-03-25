@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectTotalQTY, setOpenCart } from "../app/CartSlice.js";
+// import { Link } from "react-router-dom";
+// import { selectUser } from "../app/UserSlice.js";
+// import { auth } from "../firebase.js";
+// import { useHistory } from "react-router-dom";
+// import UserProfilePage from "./UserProfilePage.jsx";
 
 import {
   BellIcon,
@@ -23,6 +28,13 @@ const Navbar = () => {
       })
     );
   };
+  const onUserToggle = () => {
+    location.href = "/user";
+   console.log(
+      "User Profile Page"
+   )
+  };
+
 
   const onNavScroll = () => {
     if (window.scrollY > 30) {
@@ -57,11 +69,26 @@ const Navbar = () => {
           </div>
           <ul className="flex items-center justify-center gap-2">
             <li className="grid items-center">
+              <button 
+               type="button"
+               onClick={onUserToggle}
+               className="border-none outline-none active:scale-110 transition-all duration-300 relative"
+             >
               <UserIcon
                 className={`icon-style ${
                   navState && "text-slate-900 transition-all duration-300"
                 }`}
               />
+              {/* <div
+                  className={`absolute top-4 right-0 shadow w-4 h-4 text-[0.65rem] leading-tight font-medium rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-all duration-300 ${
+                    navState
+                      ? "bg-slate-900 text-slate-100 shadow-slate-900"
+                      : "bg-slate-100 text-slate-900 shadow-slate-100"
+                  }`}
+                >
+                  {totalQTY}
+                </div> */}
+              </button>
             </li>
             <li className="grid items-center">
               <BellIcon
