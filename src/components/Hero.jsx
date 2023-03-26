@@ -39,12 +39,7 @@ const Hero = ({
           <div className="flex items-center w-auto h-[45vh]">
             <h1 className="text-2xl lg:text-5xl md:text-4xl sm:text-3xl xsm:text-2xl font-serif filter drop-shadow-sm text-slate-200">
               {" "}
-              NiftyPerks creates a points-based customer loyalty programs with
-              various earning rules. Build customer loyalty, by rewarding
-              customers for their purchases, behavior, or specific
-              interactions.It engages shoppers year-around, increase customer
-              lifetime value and turn visitors into raving fans with our
-              enterprise ready loyalty points platform.
+             NiftyPerks is a platform that offers a customer loyalty program using NFTs (non-fungible tokens) as rewards for customer purchases, behavior, or interactions. The platform aims to engage customers year-round, increase their lifetime value, and turn them into loyal customers and advocates through a points-based system that offers incremental benefits as they move up the loyalty tiers.
             </h1>
             {/* <img
               src={img}

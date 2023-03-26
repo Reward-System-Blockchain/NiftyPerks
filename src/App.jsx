@@ -59,7 +59,7 @@ const App = () => {
         <FlexContent endpoint={highlight} ifExists />
         <Sales endpoint={toprateslaes} />
         <FlexContent endpoint={sneaker} />
-        <Stories story={story} />
+        {/* <Stories story={story} /> */}
       </main>
       <Footer footerAPI={footerAPI} />
     </>
