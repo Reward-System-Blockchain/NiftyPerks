@@ -1,4 +1,4 @@
-import heroimg from "../assets/hero.png";
+// import heroimg from "../assets/hero.png";
 
 import hightlightimg from "../assets/hightlightimg.png";
 import sneakershoe from "../assets/sneaker.png";
@@ -8,9 +8,9 @@ import vcover1 from "../assets/video/vcover1.png";
 import vcover2 from "../assets/video/vcover2.png";
 import vcover3 from "../assets/video/vcover3.png";
 
-import psale1 from "../assets/nike-air-red.png";
-import psale2 from "../assets/nike-adapt-bb.png";
-import psale3 from "../assets/nike-adapt-bb-smart.png";
+// import psale1 from "../assets/nike-air-red.png";
+// import psale2 from "../assets/nike-adapt-bb.png";
+// import psale3 from "../assets/nike-adapt-bb-smart.png";
 
 import product1 from "../assets/product1.png";
 import product2 from "../assets/product2.png";
@@ -34,8 +34,8 @@ import messenger from "../assets/messenger.svg";
 
 const heroapi = {
   title: "NIFTYPERKS!",
-  img: heroimg,
-  btntext: "Explore Product",
+  // img: heroimg,
+  // btntext: "Explore Product",
   // videos: [
   //   { imgsrc: vcover1, clip: clip },
   //   { imgsrc: vcover2, clip: clip },
@@ -79,19 +79,19 @@ const popularsales = {
 
 const highlight = {
   heading: "",
-  title: "OUR PURPOSE",
-  text: "The purpose of NiftyPerks is to create an engaging and innovative loyalty program that rewards customer purchases and behavior with NFTs. The goal is to increase customer lifetime value, build loyalty, and differentiate from traditional loyalty programs.",
+  title: "Tiered loyalty system",
+  text: "After first purchase user will get into Bronze tier from Rookie and further will go from Bronze to Silver and then Gold",
   // btn: "Explore More",
   // url: "https://www.nike.com/launch/t/nocta-hot-step-black-gold",
   img: hightlightimg,
 };
 
 const sneaker = {
-  heading: "FEATURED",
+  heading: "OUR PURPOSE",
   title: "",
-  text: "The radiance lives on Nike Sneakers Air Lancing Shoes, the basket ball OG that puts a fresh spin on what you know best: durably stitched overlays, clean finishes and the perfect amount of flash to make you shine.",
-  btn: "Explore More",
-  url: "https://sneakernews.com/2022/03/21/nike-lebron-2-retro-white-midnight-navy-varsity-crimson-dr0826-100/",
+  text: "The purpose of NiftyPerks is to create an engaging and innovative loyalty program that rewards customer purchases and behavior with NFTs. The goal is to increase customer lifetime value, build loyalty, and differentiate from traditional loyalty programs.",
+  // btn: "Explore More",
+  // url: "https://sneakernews.com/2022/03/21/nike-lebron-2-retro-white-midnight-navy-varsity-crimson-dr0826-100/",
   img: sneakershoe,
 };
 
