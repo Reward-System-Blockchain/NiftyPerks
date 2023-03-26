@@ -52,9 +52,9 @@ const Item = ({
 
           <div className="flex items-center justify-between w-28 my-2">
             <div className="flex items-center bg-white/80  px-1 rounded blur-effect-theme">
-              <h1 className="text-black text-sm font-medium">${price}</h1>
+              <h1 className="text-black text-sm font-medium">₹{price}</h1>
             </div>
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-0.5">
               <StarIcon className="icon-style w-5 h-5 md:w-4 md:h-4" />
               <h1 className="md:text-sm font-normal text-slate-100">
                 {rating}
@@ -87,10 +87,10 @@ const Item = ({
           <img
             src={img}
             alt={`img/item-img/${id}`}
-            className={`transitions-theme hover:-rotate-12 ${
+            className={`transitions-theme hover:-rotate-0 ${
               ifExists
-                ? "h-auto w-64 lg:w-56 md:w-48 -rotate-[35deg]"
-                : "h-36 w-64"
+                ? "h-auto w-auto lg:w-56 md:w-48 -rotate-[35deg]"
+                : "h-64 w-50"
             }`}
           />
         </div>
