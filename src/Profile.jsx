@@ -13,18 +13,36 @@ import Web3 from "web3";
 import axios from "axios";
 
 const Profile = () => {
+  const address = localStorage.getItem("walletAddress");
   const [nftData, setNFTData] = useState(null);
 
   const polybase_pk =
     "0x4d7f64eda64e488783ad02f434f0f68dfd4cb86414a5e843fdeabbd232697221c06a62243bb0251a79d45bb3c6e9f4e41e8755b1857afd06c2462517f350069d";
 
   const db = new Polybase({
-    // defaultNamespace: "pk/0x4d7f64eda64e488783ad02f434f0f68dfd4cb86414a5e843fdeabbd232697221c06a62243bb0251a79d45bb3c6e9f4e41e8755b1857afd06c2462517f350069d/RewardSystem",
-
     defaultNamespace: `pk/${polybase_pk}/NiftyPerks1`,
   });
+  const collectionReference = db.collection("nft");
 
-  const address = localStorage.getItem("walletAddress");
+  async function getPoints() {
+    const data = await db.collection("nft").record(address).get();
+    console.log(data.data.points);
+    return data.data.points;
+  }
+
+  async function updateRecord() {
+    // .create(functionName, args) args array is defined by the updateName fn in collection schema
+    var currentPoint = await getPoints();
+    const setPoints = await collectionReference
+      .record(address)
+      .call("setPoints", [currentPoint + 50]);
+    console.log(setPoints);
+    const setTier = await collectionReference
+      .record(address)
+      .call("setTier", ["Bronze"]);
+    console.log(setTier);
+  }
+
   async function createRecords() {
     try {
       const db = new Polybase({
