@@ -16,24 +16,34 @@ NiftyPerks is a loyalty rewards program that leverages blockchain technology to 
 
 1. Clone the repository:
 
-    ```git clone https://github.com/niftyperks/rewards-program.git```
+    ```sh
+    git clone https://github.com/niftyperks/rewards-program.git
+    ```
 
 
 2. Install the required dependencies:
 
-    ```npm install```
+    ```sh
+    npm install
+    ```
 
 
 3. Compile and migrate the smart contracts:
 
-    ```truffle compile```
+    ```sh
+    truffle compile
+    ```
 
-    ```truffle migrate```
+    ```sh
+    truffle migrate
+    ```
 
 
 4. Start the React app:
 
-    ```npm start```
+    ```sh
+    npm run dev
+    ```
 
 
 ## Usage
