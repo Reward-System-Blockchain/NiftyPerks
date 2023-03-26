@@ -19,27 +19,35 @@ import {
   footerAPI,
 } from "./data/data.js";
 
-import {
-  EthereumClient,
-  w3mConnectors,
-  w3mProvider,
-} from "@web3modal/ethereum";
-import { Web3Modal } from "@web3modal/react";
-import { configureChains, createClient, WagmiConfig } from "wagmi";
-import { polygonMumbai, goerli, mainnet, polygon } from "wagmi/chains";
-
-const chains = [polygonMumbai, goerli, mainnet, polygon];
-const projectId = "f32c7097c07c8c1552f46619147dff35";
-
-const { provider } = configureChains(chains, [w3mProvider({ projectId })]);
-const wagmiClient = createClient({
-  autoConnect: true,
-  connectors: w3mConnectors({ projectId, version: 1, chains }),
-  provider,
-});
-const ethereumClient = new EthereumClient(wagmiClient, chains);
-
+import { useState, useEffect } from "react";
 const App = () => {
+  const [isWalletConnected, setIsWalletConnected] = useState(false);
+  const [walletAddress, setWalletAddress] = useState(null);
+
+  async function getAccountAddress() {
+    try {
+      const { ethereum } = window;
+      if (!ethereum) {
+        alert("Please Install MetaMask");
+        return;
+      }
+      const accounts = await ethereum.request({
+        method: "eth_requestAccounts",
+      });
+      setIsWalletConnected(true);
+      setWalletAddress(accounts[0]);
+      localStorage.setItem("walletAddress", accounts[0]);
+      // setAddress(accounts[0]);
+      console.log(localStorage.getItem("walletAddress"));
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  useEffect(() => {
+    getAccountAddress();
+  }, []);
+
   return (
     <>
       {" "}
