@@ -1,9 +1,14 @@
+
+
 import React from "react";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import { Card1 } from "./components/utils/Card1.jsx";
 import { Grid } from "@nextui-org/react";
 import { footerAPI } from "./data/data.js";
+import Card from "./Card2.jsx";
+import './Card2.css';
+
 
 const Profile = () => {
   return (
@@ -20,7 +25,7 @@ const Profile = () => {
             <div className="grid items-center justify-items-center mt-12 md:mt-24 ">
               <Grid.Container gap={2} justify="center">
                 <Grid>
-                  <Card1 />
+                  <Card />
                 </Grid>
               </Grid.Container>
             </div>
