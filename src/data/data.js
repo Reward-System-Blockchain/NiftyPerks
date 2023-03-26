@@ -70,7 +70,7 @@ const popularsales = {
     {
       id: "0p0x3",
       title: "Alluring",
-      text: "Niftyperks offers a unique and innovative way for customers to earn and redeem rewards through the use of NFTs, which can create excitement and engagement among users.",
+      text: "Niftyperks offers a unique and innovative way for customers to earn and redeem rewards through the use of NFTs, which can create engagement among users.",
       color: "from-violet-500 to-indigo-500",
       shadow: "shadow-lg shadow-violet-500",
     },
