@@ -27,7 +27,6 @@ NiftyPerks is a loyalty rewards program that leverages blockchain technology to 
 
 - Push Protocol
 - Polybase
-- Solidity
 - Vite.js Framework
 - Tailwind CSS
 - Web3.js
@@ -58,10 +57,10 @@ NiftyPerks is a loyalty rewards program that leverages blockchain technology to 
 
 ## Usage
 
-1. Connect to the Ethereum network using MetaMask.
-2. Navigate to the NiftyPerks website.
-3. Create an account and link your MetaMask wallet.
-4. Start making purchases and engaging with the brand to accumulate NFTs.
+1. Navigate to the [NiftyPerks](https://niftyperks.vercel.app/) website
+2. Connect Wallet
+3. Start making purchases and engaging with the brands to accumulate reward points.
+4. The reward points will be updated in your personalized dynamic NFT.
 5. Use your NFTs to redeem exclusive discounts and perks.
 
 ## License
