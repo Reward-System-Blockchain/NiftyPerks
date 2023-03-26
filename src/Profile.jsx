@@ -73,7 +73,7 @@ const Profile = () => {
               <Grid.Container gap={2} justify="center">
                 <Grid>
                   {nftData && (
-                    <Card
+                    <Card1
                       imageSrc={nftData.img}
                       tier={nftData.tier}
                       points={nftData.points}
