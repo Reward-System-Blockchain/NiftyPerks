@@ -9,6 +9,7 @@ import {
   Stories,
 } from "./components";
 import Sales1 from "./components/Sales1";
+import NotificationPanel from "./components/NotificationPanel";
 import {
   heroapi,
   popularsales,
@@ -39,12 +40,14 @@ const wagmiClient = createClient({
 });
 const ethereumClient = new EthereumClient(wagmiClient, chains);
 
+
 const App = () => {
   return (
     <>
       {" "}
       <WagmiConfig client={wagmiClient}>
         <Navbar />
+        <NotificationPanel />
         <Cart />
         <main className="flex flex-col gap-16 relative">
           <Hero heroapi={heroapi} />
