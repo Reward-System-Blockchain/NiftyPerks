@@ -1,31 +1,54 @@
-# Nike Store Commerce Web Application! Check Live: [https://niftyperks.vercel.app//](https://niftyperks.vercel.app//)
-- Pre-requisites: Nothings! Just Stuck into This Course
-This project is developed and designed by NIFTY DEVELOPERS (`#ahmed_js 😅🚀🚀🚀`).
-This is a [Vite.js](https://vitejs.dev/) project bootstrapped with [`npm create vite@latest`]. Designed with TailwindCSS!
-# Important Links: 📣📢📣📢📣📢✈✈✈
-### Go to ViteJS [https://vitejs.dev/] (https://vitejs.dev/)!
-### Go to TailwindCSS [https://tailwindcss.com/](https://tailwindcss.com/)!
-### Go to Redux-Toolkit [https://redux-toolkit.js.org/](https://redux-toolkit.js.org/)!
-### Go to React-Redux [https://react-redux.js.org/](https://react-redux.js.org/)!
-### Go to React-Hot-Toast [https://react-redux.js.org/](https://react-redux.js.org/)!
+# NiftyPerks: Rewarding Loyalty with NFTs
 
-## Getting Started
+NiftyPerks is a loyalty rewards program that leverages blockchain technology to reward customers with Non-Fungible Tokens (NFTs) instead of traditional loyalty points. With NiftyPerks, customers can accumulate NFTs by making purchases, referring friends, and engaging with the brand on social media. The NFTs can be used to unlock exclusive discounts, access to limited edition products, and other perks.
 
-First, run the development server:
+## Technologies Used
 
-```bash
-npm install
-# or
-yarn instll
+- Solidity
+- Ethereum Blockchain
+- Truffle Framework
+- IPFS
+- React
+- Web3.js
+- MetaMask
 
-# and Now:
+## Installation
 
-npm run dev
-# or
-yarn dev
-```
-Open [http://localhost:5173/](http://localhost:5173/) with your browser to see the result.
+1. Clone the repository:
 
-You can start editing the page by modifying `src/App.jsx`. The page auto-updates as you edit the file.
+    ```git clone https://github.com/niftyperks/rewards-program.git```
+
+
+2. Install the required dependencies:
+
+    ```npm install```
+
+
+3. Compile and migrate the smart contracts:
+
+    ```truffle compile```
+
+    ```truffle migrate```
+
+
+4. Start the React app:
+
+    ```npm start```
+
+
+## Usage
+
+1. Connect to the Ethereum network using MetaMask.
+2. Navigate to the NiftyPerks website.
+3. Create an account and link your MetaMask wallet.
+4. Start making purchases and engaging with the brand to accumulate NFTs.
+5. Use your NFTs to redeem exclusive discounts and perks.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
+
 
 
