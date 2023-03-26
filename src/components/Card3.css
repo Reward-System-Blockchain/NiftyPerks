@@ -11,7 +11,7 @@
   background: linear-gradient(
     219deg,
     rgba(75, 53, 118, 1) 33%,
-    rgba(248, 177, 60, 1) 100%
+    rgb(86, 24, 157) 100%
   );
   font-family: "Roboto", sans-serif;
   gap: 50px;
@@ -21,7 +21,7 @@
   transform-style: preserve-3d;
   position: relative;
   padding: 25px;
-  width: 350px;
+  width: 500px;
   height: 500px;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -32,7 +32,7 @@
   background: linear-gradient(
     25deg,
     rgba(75, 53, 118, 1) 0%,
-    rgba(248, 177, 60, 1) 86%
+    rgb(12, 236, 217) 86%
   );
   transition: all 0.1s ease;
 }

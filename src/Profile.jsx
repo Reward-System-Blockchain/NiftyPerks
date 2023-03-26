@@ -13,8 +13,6 @@ import Web3 from "web3";
 import axios from "axios";
 import Card3 from "./components/Card3.jsx";
 
-
-
 const Profile = () => {
   const address = localStorage.getItem("walletAddress");
   const [nftData, setNFTData] = useState(null);
@@ -94,15 +92,20 @@ const Profile = () => {
               <Grid.Container gap={2} justify="center">
                 <Grid>
                   {nftData && (
-                    <Card
+                    // <Card
+                    //   imageSrc={nftData.img}
+                    //   tier={nftData.tier}
+                    //   points={nftData.points}
+                    //   id={nftData.id}
+                    // />
+
+                    <Card3
                       imageSrc={nftData.img}
                       tier={nftData.tier}
                       points={nftData.points}
                       id={nftData.id}
                     />
-                    
                   )}
-                  <Card3 />
                 </Grid>
               </Grid.Container>
             </div>

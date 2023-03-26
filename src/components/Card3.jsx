@@ -2,7 +2,9 @@ import React, { useState, useRef } from "react";
 import "./Card3.css";
 import "./Nike-Shoe.png";
 
-export default function Card3() {
+export default function Card3(props) {
+  const { imageSrc, tier, points, id } = props;
+
   const [xRotation, setXRotation] = useState(0);
   const [yRotation, setYRotation] = useState(0);
   const cardRef = useRef(null);
@@ -27,7 +29,7 @@ export default function Card3() {
     const title = titleRef.current;
     const sizesBox = sizesboxRef.current;
     const purchase = purchaseRef.current;
-    const desc = descRef.current
+    const desc = descRef.current;
     title.style.transform = "translateZ(150px)";
     img.style.transform = "translateZ(100px) rotateZ(-45deg)";
     sizesBox.style.transform = "translateZ(100px)";
@@ -49,41 +51,42 @@ export default function Card3() {
   }
 
   return (
-    
-      <div
-        className="card"
-        ref={cardRef}
-        style={{
-          transform: `rotateX(${xRotation}deg) rotateY(${yRotation}deg)`,
-        }}
-        onMouseMove={handleMouseMove}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
-        <img
-          ref={imgRef}
-          src="https://user-images.githubusercontent.com/90423812/227777031-9b1f4037-2446-4bdb-81dc-1674251688c9.PNG"
-          alt="Nike-Shoe"
-          className="sneaaker-img"
-        />
-        <h1 className="title" ref={titleRef}>
-          Nike Dunk High
-        </h1>
-        <p ref={descRef}>
+    <div
+      className="card text-center"
+      ref={cardRef}
+      style={{
+        transform: `rotateX(${xRotation}deg) rotateY(${yRotation}deg)`,
+      }}
+      onMouseMove={handleMouseMove}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <img ref={imgRef} src={imageSrc} alt="NFT" className="sneaaker-img" />
+      <h6 className="title" ref={titleRef}>
+        {id}
+      </h6>
+
+      <h1 className="title" ref={titleRef}>
+        Tier : {tier}
+      </h1>
+      <h1 className="title" ref={titleRef}>
+        Points : {points}
+      </h1>
+      {/* <p ref={descRef}>
           Nike Dunk High is a high-top version of the classic Nike Dunk sneaker,
           featuring a padded collar for added support and comfort.
-        </p>
-        {/* <ul className="sizes-box" ref={sizesboxRef}>
+        </p> */}
+      {/* <ul className="sizes-box" ref={sizesboxRef}>
           <li>38</li>
           <li>40</li>
           <li>42</li>
           <li>44</li>
         </ul> */}
-        {/* <div className="button-box" ref={purchaseRef}>
+      {/* <div className="button-box" ref={purchaseRef}>
           <button className="purchase" >
             Purchase
           </button> 
         </div>*/}
-      </div>
+    </div>
   );
 }
