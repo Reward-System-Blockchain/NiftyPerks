@@ -6,6 +6,8 @@ import { selectTotalQTY, setOpenCart } from "../app/CartSlice.js";
 // import { auth } from "../firebase.js";
 // import { useHistory } from "react-router-dom";
 // import UserProfilePage from "./UserProfilePage.jsx";
+import * as PushAPI from "@pushprotocol/restapi";
+import { Button, Drawer, Card } from "antd";
 
 import {
   BellIcon,
@@ -17,9 +19,31 @@ import logo from "../assets/logo.png";
 import { Web3Button } from "@web3modal/react";
 
 const Navbar = () => {
+  const address = localStorage.getItem("walletAddress");
   const [navState, setNavState] = useState(false);
   const dispatch = useDispatch();
   const totalQTY = useSelector(selectTotalQTY);
+
+  const [open, setOpen] = useState(false);
+
+  const [notification, SetNotification] = useState([]);
+  const NotificationReceiver = async (props) => {
+    const notifications = await PushAPI.user.getFeeds({
+      user: `eip155:80001:${address}`, // user address in CAIP
+      env: "staging",
+    });
+    SetNotification(notifications);
+    console.log(notifications);
+  };
+
+  const showDrawer = () => {
+    NotificationReceiver();
+    setOpen(true);
+  };
+
+  const onClose = () => {
+    setOpen(false);
+  };
 
   const onCartToggle = () => {
     dispatch(
@@ -88,11 +112,43 @@ const Navbar = () => {
               </button>
             </li>
             <li className="grid items-center">
-              <BellIcon
-                className={`icon-style ${
-                  navState && "text-slate-900 transition-all duration-300"
-                }`}
-              />
+              <button
+                type="button"
+                onClick={showDrawer}
+                className="border-none outline-none active:scale-110 transition-all duration-300 relative"
+              >
+                <BellIcon
+                  className={`icon-style ${
+                    navState && "text-slate-900 transition-all duration-300"
+                  }`}
+                />
+              </button>
+              <Drawer
+                title="Push Notifications - NiftyPerks"
+                width={"700px"}
+                placement="right"
+                onClose={onClose}
+                open={open}
+              >
+                {notification.map((item, index) => {
+                  // console.log(notification);
+                  return (
+                    <Card
+                      key="key"
+                      className="mt-3"
+                      type="inner"
+                      title={item["title"]}
+                      extra={
+                        <a href="niftyperks.vercel.app">
+                          <b>NiftyPerks</b>
+                        </a>
+                      }
+                    >
+                      {item["message"]}
+                    </Card>
+                  );
+                })}
+              </Drawer>
             </li>
             <li className="grid items-center">
               <button
