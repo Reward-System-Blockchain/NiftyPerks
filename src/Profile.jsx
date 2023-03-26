@@ -21,7 +21,7 @@ const Profile = () => {
   const db = new Polybase({
     // defaultNamespace: "pk/0x4d7f64eda64e488783ad02f434f0f68dfd4cb86414a5e843fdeabbd232697221c06a62243bb0251a79d45bb3c6e9f4e41e8755b1857afd06c2462517f350069d/RewardSystem",
 
-    defaultNamespace: `pk/${polybase_pk}/NiftyPerks`,
+    defaultNamespace: `pk/${polybase_pk}/NiftyPerks1`,
   });
 
   const address = localStorage.getItem("walletAddress");
@@ -30,13 +30,13 @@ const Profile = () => {
       const db = new Polybase({
         // defaultNamespace: "pk/0x4d7f64eda64e488783ad02f434f0f68dfd4cb86414a5e843fdeabbd232697221c06a62243bb0251a79d45bb3c6e9f4e41e8755b1857afd06c2462517f350069d/RewardSystem",
 
-        defaultNamespace: `pk/${polybase_pk}/NiftyPerks`,
+        defaultNamespace: `pk/${polybase_pk}/NiftyPerks1`,
       });
       var record = await db
         .collection("nft")
         .create([
           address,
-          "https://user-images.githubusercontent.com/90423812/227624708-a8e654fc-643a-410b-b304-2eaee628e106.jpg",
+          "https://user-images.githubusercontent.com/90423812/227777031-9b1f4037-2446-4bdb-81dc-1674251688c9.PNG",
           "Rookie",
           0,
         ]);
@@ -48,7 +48,7 @@ const Profile = () => {
 
   async function fetchData() {
     console.log(address);
-    const metadataUrl = `https://testnet.polybase.xyz/v0/collections/pk%2F${polybase_pk}%2FNiftyPerks%2Fnft/records/${address}?format=nft`;
+    const metadataUrl = `https://testnet.polybase.xyz/v0/collections/pk%2F${polybase_pk}%2FNiftyPerks1%2Fnft/records/${address}?format=nft`;
     const response = await axios.get(metadataUrl);
     setNFTData(response.data);
     console.log(response.data);
